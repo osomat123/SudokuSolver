@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="{{ url_for('static', filename='sudoku.png') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Sudoku Solver</title>
+</head>
+<body>
+    <header class="header">
+        <img src="{{ url_for('static', filename='sudoku.png') }}" alt="Logo" class="logo">
+        Sudoku Solver
+    </header>
+
+    <main class="main">
+        <div class="sudoku">
+            <div class="image">
+
+            </div>
+            <div class="solution">
+
+            </div>
+        </div>
+        <div class="input">
+            <input type="file" id="image_input" accept="image/jpg, image/jpeg" required>
+            <button id="submit" class="button">Submit</button>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+    </footer>
+
+    <script>
+        const gif_url = "{{ url_for('static', filename='loading.gif')}}";
+        const sad_url = "{{ url_for('static', filename='sad.jpeg')}}";
+    </script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
